@@ -1,0 +1,123 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>aspnet-SAT.UI.MVC-D9146705-F348-48A8-BE93-BF0FBE0A8659</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="_Archive\404.html" />
+    <Content Include="_Archive\about.html" />
+    <Content Include="_Archive\assets\css\bootstrap.min.css" />
+    <Content Include="_Archive\assets\css\default-css.css" />
+    <Content Include="_Archive\assets\css\font-awesome.min.css" />
+    <Content Include="_Archive\assets\css\magnific-popup.css" />
+    <Content Include="_Archive\assets\css\owl.carousel.min.css" />
+    <Content Include="_Archive\assets\css\responsive.css" />
+    <Content Include="_Archive\assets\css\slicknav.min.css" />
+    <Content Include="_Archive\assets\css\styles.css" />
+    <Content Include="_Archive\assets\css\typography.css" />
+    <Content Include="_Archive\assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="_Archive\assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="_Archive\assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="_Archive\assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="_Archive\assets\fonts\fontawesome-webfont.woff2" />
+    <Content Include="_Archive\assets\fonts\FontAwesome.otf" />
+    <Content Include="_Archive\assets\images\404.png" />
+    <Content Include="_Archive\assets\images\about\abt-right-thumb.jpg" />
+    <Content Include="_Archive\assets\images\angle-left.png" />
+    <Content Include="_Archive\assets\images\angle-right.png" />
+    <Content Include="_Archive\assets\images\author\auth1.jpg" />
+    <Content Include="_Archive\assets\images\author\blog-post-auth1.jpg" />
+    <Content Include="_Archive\assets\images\author\blog-post-auth2.jpg" />
+    <Content Include="_Archive\assets\images\author\blog-post-auth3.jpg" />
+    <Content Include="_Archive\assets\images\author\cs-comment-auth1.jpg" />
+    <Content Include="_Archive\assets\images\author\cs-comment-auth2.jpg" />
+    <Content Include="_Archive\assets\images\author\cs-comment-auth3.jpg" />
+    <Content Include="_Archive\assets\images\author\cs-post-author1.jpg" />
+    <Content Include="_Archive\assets\images\bg\abt2-bg.jpg" />
+    <Content Include="_Archive\assets\images\bg\bg1.jpg" />
+    <Content Include="_Archive\assets\images\bg\crumb-bg.jpg" />
+    <Content Include="_Archive\assets\images\bg\cta-bg-bottom.jpg" />
+    <Content Include="_Archive\assets\images\bg\flwr-bg.jpg" />
+    <Content Include="_Archive\assets\images\bg\hero-bg.jpg" />
+    <Content Include="_Archive\assets\images\bg\hero-bg2.jpg" />
+    <Content Include="_Archive\assets\images\bg\slider-bg1.jpg" />
+    <Content Include="_Archive\assets\images\bg\slider-bg2.jpg" />
+    <Content Include="_Archive\assets\images\bg\slider-bg3.jpg" />
+    <Content Include="_Archive\assets\images\bg\slider.jpg" />
+    <Content Include="_Archive\assets\images\bg\take-toure-bg.jpg" />
+    <Content Include="_Archive\assets\images\bg\tst-bg-shape.png" />
+    <Content Include="_Archive\assets\images\blog\blog-details.jpg" />
+    <Content Include="_Archive\assets\images\blog\blog-thumbnail1.jpg" />
+    <Content Include="_Archive\assets\images\blog\blog-thumbnail2.jpg" />
+    <Content Include="_Archive\assets\images\blog\blog-thumbnail3.jpg" />
+    <Content Include="_Archive\assets\images\blog\blog-thumbnail4.jpg" />
+    <Content Include="_Archive\assets\images\blog\blog-thumbnail5.jpg" />
+    <Content Include="_Archive\assets\images\blog\blog-thumbnail6.jpg" />
+    <Content Include="_Archive\assets\images\course\course-details.jpg" />
+    <Content Include="_Archive\assets\images\course\cs-img1.jpg" />
+    <Content Include="_Archive\assets\images\course\cs-img2.jpg" />
+    <Content Include="_Archive\assets\images\course\cs-img3.jpg" />
+    <Content Include="_Archive\assets\images\course\cs-img4.jpg" />
+    <Content Include="_Archive\assets\images\course\cs-img5.jpg" />
+    <Content Include="_Archive\assets\images\course\cs-img6.jpg" />
+    <Content Include="_Archive\assets\images\course\cs-small-thumb1.jpg" />
+    <Content Include="_Archive\assets\images\course\cs-small-thumb2.jpg" />
+    <Content Include="_Archive\assets\images\course\cs-small-thumb3.jpg" />
+    <Content Include="_Archive\assets\images\course\cs-small-thumb4.jpg" />
+    <Content Include="_Archive\assets\images\course\cs-small-thumb5.jpg" />
+    <Content Include="_Archive\assets\images\feature-archive\ftvc-icon1.png" />
+    <Content Include="_Archive\assets\images\feature-archive\ftvc-icon2.png" />
+    <Content Include="_Archive\assets\images\feature-archive\ftvc-icon3.png" />
+    <Content Include="_Archive\assets\images\feature-archive\ftvc-icon4.png" />
+    <Content Include="_Archive\assets\images\feature-archive\ftvc-img1.png" />
+    <Content Include="_Archive\assets\images\feature-archive\ftvc-img2.png" />
+    <Content Include="_Archive\assets\images\feature-archive\ftvc-img3.png" />
+    <Content Include="_Archive\assets\images\feature-archive\ftvc-img4.png" />
+    <Content Include="_Archive\assets\images\icon\abt-titleshape.png" />
+    <Content Include="_Archive\assets\images\icon\cross-cursor.png" />
+    <Content Include="_Archive\assets\images\icon\hb-bottom-shape.png" />
+    <Content Include="_Archive\assets\images\icon\logo-black.png" />
+    <Content Include="_Archive\assets\images\icon\logo-middle.png" />
+    <Content Include="_Archive\assets\images\icon\logo.png" />
+    <Content Include="_Archive\assets\images\icon\title-top-shape.png" />
+    <Content Include="_Archive\assets\images\map.png" />
+    <Content Include="_Archive\assets\images\sidebar\banner-img.jpg" />
+    <Content Include="_Archive\assets\images\teacher\tch-left-thumb.jpg" />
+    <Content Include="_Archive\assets\images\teacher\teacher-member1.jpg" />
+    <Content Include="_Archive\assets\images\teacher\teacher-member2.jpg" />
+    <Content Include="_Archive\assets\images\teacher\teacher-member3.jpg" />
+    <Content Include="_Archive\assets\images\teacher\teacher-member4.jpg" />
+    <Content Include="_Archive\assets\images\teacher\teacher-member5.jpg" />
+    <Content Include="_Archive\assets\images\teacher\teacher-member6.jpg" />
+    <Content Include="_Archive\assets\js\bootstrap.min.js" />
+    <Content Include="_Archive\assets\js\google-maps.js" />
+    <Content Include="_Archive\assets\js\jquery.magnific-popup.min.js" />
+    <Content Include="_Archive\assets\js\jquery.slicknav.min.js" />
+    <Content Include="_Archive\assets\js\owl.carousel.min.js" />
+    <Content Include="_Archive\assets\js\plugins.js" />
+    <Content Include="_Archive\assets\js\scripts.js" />
+    <Content Include="_Archive\assets\js\vendor\jquery-2.2.4.min.js" />
+    <Content Include="_Archive\assets\js\vendor\modernizr-2.8.3.min.js" />
+    <Content Include="_Archive\blog-details.html" />
+    <Content Include="_Archive\blog.html" />
+    <Content Include="_Archive\contact.html" />
+    <Content Include="_Archive\course-details.html" />
+    <Content Include="_Archive\courses.html" />
+    <Content Include="_Archive\index2.html" />
+    <Content Include="_Archive\teacher-details.html" />
+    <Content Include="_Archive\teachers.html" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="6.0.9" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.9" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.9" />
+  </ItemGroup>
+
+</Project>
