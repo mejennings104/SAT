@@ -22,20 +22,24 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Ssname)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Ssdescription)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Ssid">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Ssid">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Ssid">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ssname)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ssdescription)
+                </td>
+                <td>
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <a asp-action="Edit" asp-route-id="@item.Ssid">Edit</a> <span>|</span>
+                        <a asp-action="Details" asp-route-id="@item.Ssid">Details</a> <span>|</span>
+                        <a asp-action="Delete" asp-route-id="@item.Ssid">Delete</a>
+                    }
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

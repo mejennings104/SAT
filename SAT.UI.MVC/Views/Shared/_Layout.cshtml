@@ -1,4 +1,7 @@
-﻿<!doctype html>
+﻿@using Microsoft.AspNetCore.Identity;
+@inject SignInManager<IdentityUser> signInManager
+
+<!doctype html>
 <html class="no-js" lang="en">
 
 <head>
@@ -75,33 +78,30 @@
                             <div class="main-menu">
                                 <nav>
                                     <ul id="m_menu_active">
+
                                         <li class="active">
                                             <a href="@Url.Action("Index", "Home")">Home</a>
                                         </li>
                                         <li><a href="@Url.Action("About", "Home")">About</a></li>
-                                        <li>
-                                            <a href="javascript:void(0);">Courses</a>
-                                            <ul class="submenu">
-                                                <li><a href="courses.html">courses</a></li>
-                                                <li><a href="course-details.html">course details</a></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:void(0);">teacher</a>
-                                            <ul class="submenu">
-                                                <li><a href="teachers.html">teachers</a></li>
-                                                <li><a href="teacher-details.html">teacher details</a></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:void(0);">blog</a>
-                                            <ul class="submenu">
-                                                <li><a href="blog.html">blog</a></li>
-                                                <li><a href="blog-details.html">blog details</a></li>
-                                            </ul>
-                                        </li>
+                                       
                                         <li><a href="@Url.Action("Contact", "Home")">Contact</a></li>
+                                       <li><partial name="_LoginPartial" /></li>
+                                    @if (User.IsInRole("Admin"))
+                                    {
+                                        @*<li class="nav-item dropdown">*@
+                                           @* <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" 
+                                            aria-haspopup="true" aria-expanded="true"> <span class="nav-label">Admin<span 
+                                                class="caret"></span></a>*@
+                                           @* <ul class="sub-menu">*@
+                                                <li><a asp-action="ListUsers" asp-controller="Administration">Users</a></li>
+                                                <li><a asp-action="ListRoles" asp-controller="Administration">Roles</a></li>
+                                                <li><a asp-action="Index" asp-controller="Courses">Courses</a></li>
+
+                                          @*  </ul>
+                                        </li>*@
+                                    }
                                     </ul>
+                                    
                                 </nav>
                             </div>
                         </div>
@@ -204,6 +204,14 @@
     <script src="~/assets/js/jquery.slicknav.min.js"></script>
     <script src="~/assets/js/plugins.js"></script>
     <script src="~/assets/js/scripts.js"></script>
+    @if(ViewData["Title"].ToString() != "Home"){
+        <script>
+            let header = document.getElementById('header');
+            if()
+        </script>
+    }
+
+    @RenderSection("Scripts", false)
 </body>
 
 </html>
