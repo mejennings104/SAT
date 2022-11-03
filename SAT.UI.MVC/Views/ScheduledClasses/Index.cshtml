@@ -3,12 +3,19 @@
 @{
     ViewData["Title"] = "Index";
 }
-
-<h1>Index</h1>
-
+<div class="crumbs-area">
+    <div class="container">
+        <div class="crumb-content">
+            <h4 class="crumb-title"><span>Scheduled </span>Classes</h4>
+        </div>
+    </div>
+</div>
+@if (User.IsInRole("Admin") || User.IsInRole("Scheduler"))
+{    
 <p>
     <a asp-action="Create">Create New</a>
 </p>
+}
 <table class="table">
     <thead>
         <tr>
@@ -56,11 +63,15 @@
                     @Html.DisplayFor(modelItem => item.Scs.Scsname)
                 </td>
                 <td>
-                    @if (User.IsInRole("Admin"))
+                    @if (User.IsInRole("Admin") || User.IsInRole("Scheduler"))
                     {
                         <a asp-action="Edit" asp-route-id="@item.ScheduledClassId">Edit</a> <span>|</span>
                         <a asp-action="Details" asp-route-id="@item.ScheduledClassId">Details</a> <span>|</span>
+                    }
+                    @if (User.IsInRole("Admin"))
+                    {
                         <a asp-action="Delete" asp-route-id="@item.ScheduledClassId">Delete</a>
+
                     }
                 </td>
             </tr>
