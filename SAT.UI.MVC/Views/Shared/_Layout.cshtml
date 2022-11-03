@@ -71,7 +71,8 @@
                     <div class="row align-items-center">
                         <div class="col-lg-3 col-sm-9">
                             <div class="logo">
-                                <a href="index.html"><img src="~/assets/images/icon/logo.png" alt="logo"></a>
+                                <a href="index.html"><img src="~/assets/images/icon/logo-middle.png" width="50px" alt="logo"></a>
+                                <h2 class="text-white">Centriq 2.0</h2>
                             </div>
                         </div>
                         <div class="col-xl-8 col-lg-7 d-none d-lg-block">
@@ -85,21 +86,42 @@
                                         <li><a href="@Url.Action("About", "Home")">About</a></li>
                                        
                                         <li><a href="@Url.Action("Contact", "Home")">Contact</a></li>
-                                       <li><partial name="_LoginPartial" /></li>
+                                        <li><partial name="_LoginPartial" /></li>
+                                        @*(SignInManager.IsSignedIn(User) &&*@
                                     @if (User.IsInRole("Admin"))
                                     {
-                                        @*<li class="nav-item dropdown">*@
-                                           @* <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" 
-                                            aria-haspopup="true" aria-expanded="true"> <span class="nav-label">Admin<span 
-                                                class="caret"></span></a>*@
-                                           @* <ul class="sub-menu">*@
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" 
+                                            aria-haspopup="true" aria-expanded="true"> <span class="nav-label">Admin</span>
+                                                <span class="caret"></span></a>
+                                            <ul class="submenu">
                                                 <li><a asp-action="ListUsers" asp-controller="Administration">Users</a></li>
                                                 <li><a asp-action="ListRoles" asp-controller="Administration">Roles</a></li>
                                                 <li><a asp-action="Index" asp-controller="Courses">Courses</a></li>
-
-                                          @*  </ul>
-                                        </li>*@
+                                                <li><a asp-action="Index" asp-controller="Enrollments">Enrollments</a></li>
+                                                <li><a asp-action="Index" asp-controller="ScheduledClasses">Scheduled Classes</a></li>
+                                                <li><a asp-action="Index" asp-controller="ScheduledClassStatus">Class Status</a></li>
+                                                <li><a asp-action="Index" asp-controller="Students">Students</a></li>
+                                                <li><a asp-action="Index" asp-controller="StudentStatus">Student Status</a></li>
+                                            </ul>
+                                        </li>
                                     }
+                                    @if (User.IsInRole("Scheduler"))
+                                        {
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button"
+                                           aria-haspopup="true" aria-expanded="true">
+                                                <span class="nav-label">Scheduler</span>
+                                                <span class="caret"></span>
+                                            </a>
+                                            <ul class="submenu">
+                                                <li><a asp-action="Index" asp-controller="Enrollments">Enrollments</a></li>
+                                                <li><a asp-action="Index" asp-controller="ScheduledClasses">Scheduled Classes</a></li>
+                                                <li><a asp-action="Index" asp-controller="Students">Students</a></li>
+                                            </ul>
+                                        </li>
+                                        }
+
                                     </ul>
                                     
                                 </nav>
