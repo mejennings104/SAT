@@ -1,10 +1,8 @@
 using Microsoft.AspNetCore.Identity;
-using Microsoft.CodeAnalysis.Options;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Options;
 using SAT.DATA.EF.Models;
 using SAT.UI.MVC.Data;
-using System.Data;
+
 
 var builder = WebApplication.CreateBuilder(args);
 

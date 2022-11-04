@@ -1,4 +1,6 @@
-﻿@{
+﻿@model SAT.UI.MVC.Models.ContactViewModel
+
+@{
     ViewData["Title"] = "Contact";
 }
 
@@ -12,7 +14,7 @@
     </div>
 </div>
 <!-- crumbs area end -->
-<!-- contact info area start -->
+@*<!-- contact info area start -->
 <div class="contact-info ptb--120">
     <div class="container">
         <div class="row">
@@ -43,7 +45,7 @@
         </div>
     </div>
 </div>
-<!-- contact info area end -->
+<!-- contact info area end -->*@
 <!-- contact form area start -->
 <div class="contact-form-area pb--120">
     <div class="container">
@@ -51,27 +53,29 @@
             <div class="col-md-10 offset-md-1">
                 <div class="cnt-title">
                     <h4>Get in touch <span>with us</span></h4>
-                    <p>Quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut </p>
+                    <p>We would love to hear from you! </p>
                 </div>
             </div>
         </div>
         <div class="contact-form">
-            <form>
+            <form asp-action="Contact">
+                <div asp-validation-summary="ModelOnly"></div>
                 <div class="row">
                     <div class="col-md-4">
-                        <input type="text" name="name" placeholder="Enter your name">
+                        <input type="name" placeholder="Name" name="name" id="name">
                     </div>
                     <div class="col-md-4">
-                        <input type="email" name="email" placeholder="Your Email">
+                        <input type="email" placeholder="Email" name="email" id="email">
                     </div>
                     <div class="col-md-4">
-                        <input type="text" name="subject" placeholder="Subject">
+                        <input type="text" placeholder="Subject" name="subject" id="subject">
                     </div>
                     <div class="col-12">
-                        <textarea name="msg" id="msg" placeholder="Your message here"></textarea>
-                    </div>
-                    <div class="col-12 text-center">
-                        <button type="submit">SEND TO US</button>
+                        <p><textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea></p>
+                        <input type="hidden" name="token" value="FsWga4&f6aw" />
+                        <div class="col-12 text-center">
+                            <button type="submit">SEND TO US</button>
+                        </div>
                     </div>
                 </div>
             </form>
