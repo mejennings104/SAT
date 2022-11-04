@@ -7,10 +7,10 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Edification - Responsive Education HTML5 Template</title>
+    <title>@ViewData["Title"] | Centriq 2.0</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Place favicon.ico in the root directory -->
-    <link rel="shortcut icon" type="image/png" href="~/assets/images/icon/favicon.ico">
+    <link rel="shortcut icon" type="image.png" href="~/assets/images/icon/favicon.ico">
     <!-- all css here -->
     <link rel="stylesheet" href="~/assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="~/assets/css/font-awesome.min.css">
@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="~/assets/css/styles.css">
     <link rel="stylesheet" href="~/assets/css/responsive.css">
     <!--color css-->
-    <link rel="stylesheet" id="triggerColor" href="~/assets/css/triggerplate/color-0.css">
+    @*<link rel="stylesheet" id="triggerColor" href="~/assets/css/triggerplate/color-0.css">*@
     <!-- modernizr css -->
     <script src="~/assets/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
@@ -121,9 +121,7 @@
                                             </ul>
                                         </li>
                                         }
-
-                                    </ul>
-                                    
+                                    </ul>                                    
                                 </nav>
                             </div>
                         </div>
@@ -187,30 +185,28 @@
                     <div class="col-md-3">
                         <div class="widget footer-link">
                             <h4 class="fwidget-title mb-5 pb-3 primary-color">Footer Menu</h4>
-                            <ul>
-                                <li><a href="#"><i class="fa fa-arrow-right"></i>Case Studies</a></li>
+                            <ul>                                
                                 <li><a href="@Url.Action("About", "Home")"><i class="fa fa-arrow-right"></i>About Us</a></li>
-                                <li><a href="#"><i class="fa fa-arrow-right"></i>Our Story</a></li>
-                                <li><a href="#"><i class="fa fa-arrow-right"></i>Blog Post</a></li>
-                                <li><a href="#"><i class="fa fa-arrow-right"></i>Work with Us</a></li>
+                                <li><a href="@Url.Action("About", "Home")"></i>Our Story</a></li>                               
                             </ul>
                         </div>
                     </div>
                     <div class="col-md-5">
                         <div class="widget widget-opening">
-                            <h4 class="fwidget-title mb-5 pb-3 primary-color">Working Day & time</h4>
-                            <p>Architecto beatae vitae dicta sunt ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit</p>
+                            <h4 class="fwidget-title mb-5 pb-3 primary-color">School Hours</h4>
+                            <p>We have open hours to work with your needs.</p>
                             <ul>
-                                <li><span>Mon - Tus :</span>6.00 am - 10.00 pm</li>
+                                <li><span>Mon - Tues :</span>8:00 am - 9:00 pm</li>
                                 <li><span>Wed - Tur :</span>8.00 am - 6.00 pm</li>
-                                <li><span>Friday :</span>3.00 pm - 8.00 pm</li>
+                                <li><span>Friday :</span>10:00 am - 8.00 pm</li>
+                                <li><span>Saturday :</span>Closed</li>
                                 <li><span>Sunday :</span>Closed</li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div class="footer-bottom">
-                    <p>Copyright © 2022 <span><a class="primary-color" href="https://themeforest.net/user/pixelthemez/portfolio" target="_blank">Edification</a> </span> - All Rights Reserved. Made by <span><a class="primary-color" href="https://furioustheme.com/" target="_blank">Furioustheme</a></span></p>
+                    <p>Copyright © @DateTime.Now.Year <span><a class="primary-color" href="https://themeforest.net/user/pixelthemez/portfolio" target="_blank">Centriq 2.0</a> </span> - All Rights Reserved. Made by <span><a class="primary-color" href="https://furioustheme.com/" target="_blank">Furioustheme</a></span></p>
                 </div>
             </div>
         </div>
@@ -226,12 +222,7 @@
     <script src="~/assets/js/jquery.slicknav.min.js"></script>
     <script src="~/assets/js/plugins.js"></script>
     <script src="~/assets/js/scripts.js"></script>
-    @if(ViewData["Title"].ToString() != "Home"){
-        <script>
-            let header = document.getElementById('header');
-            if()
-        </script>
-    }
+    
 
     @RenderSection("Scripts", false)
 </body>
